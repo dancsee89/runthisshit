@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <dirent.h>
 
@@ -25,7 +26,7 @@ int main(void) {
 void matchFileType(char* filename) {
 	if (filename != NULL) {
 		if (strcmp(filename, "package.json") == 0) {
-			printf("This should run npm start\n");
+			system("npm start");
 		}
 	}
 	else {
